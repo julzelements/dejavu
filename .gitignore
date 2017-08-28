@@ -6,4 +6,4 @@ mp3
 .DS_Store
 *.cnlf
 testMovies
-pem
+*.pem
