@@ -19,8 +19,9 @@ from redis import Redis, RedisError
 redis = Redis(host="redis", db=0, socket_connect_timeout=2, socket_timeout=2)
 app = Flask(__name__)
 
-ALLOWED_EXTENSIONS = set(['mp3'])
-UPLOADS_PATH = '/uploads'
+ALLOWED_EXTENSIONS = set(['wav'])
+UPLOADS_PATH = '/Users/julianscharf/Development/dejavu/uploads'
+# UPLOADS_PATH = '/uploads'
 
 
 def allowed_file(filename):
@@ -51,6 +52,7 @@ def recognize():
             return redirect(request.url)
         file = request.files['file']
         if file.filename == '':
+            app.logger.debug('file was nil')
             flash('No selected file')
             return redirect(request.url)
         if file and allowed_file(file.filename):

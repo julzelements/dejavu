@@ -1,0 +1,2 @@
+curl -F "file=@ironMan/IronMan_420-425secs.mp3;type=audio/mpeg" http://localhost:5000/recognize
+curl -F "file=@m4a/ironManSample.mp3;type=audio/mpeg" http://localhost:5000/recognize
