@@ -20,8 +20,8 @@ redis = Redis(host="redis", db=0, socket_connect_timeout=2, socket_timeout=2)
 app = Flask(__name__)
 
 ALLOWED_EXTENSIONS = set(['wav'])
-UPLOADS_PATH = '/Users/julianscharf/Development/dejavu/uploads'
-# UPLOADS_PATH = '/uploads'
+# UPLOADS_PATH = '/Users/julianscharf/Development/dejavu/uploads'
+UPLOADS_PATH = '/uploads'
 
 
 def allowed_file(filename):
@@ -61,7 +61,7 @@ def recognize():
 
             djv = Dejavu(config)
             song = djv.recognize(FileRecognizer, UPLOADS_PATH + '/' + filename)
-            return "From file we recognized: %s\n" % song
+            return "%s" % song
 
     app.logger.debug('A GET request was made')
     return '''

@@ -8,7 +8,7 @@ from dejavu import Dejavu
 from dejavu.recognize import FileRecognizer, MicrophoneRecognizer
 
 # load config from a JSON file (or anything outputting a python dictionary)
-with open("dejavu.cnf.SAMPLE") as f:
+with open("localdb.cnf.SAMPLE") as f:
     config = json.load(f)
 
 if __name__ == '__main__':
@@ -19,7 +19,7 @@ if __name__ == '__main__':
 	djv = Dejavu(config)
 
 	# Fingerprint all the mp3's in the directory we give it
-	djv.fingerprint_directory("ironMan", [".mp3"])
+	djv.fingerprint_directory("assets/ironMan", [".mp3"])
 
 	print "end"
 	print strftime("%Y-%m-%d %H:%M:%S", gmtime())

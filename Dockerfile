@@ -18,5 +18,5 @@ ADD . /app/
 
 EXPOSE 5000
 #--host tag exposes the server to other networks
-ENTRYPOINT cd /app && export FLASK_DEBUG=1 && FLASK_APP=recognizeFile.py flask run --host=0.0.0.0
+ENTRYPOINT cd /app && export FLASK_DEBUG=1 docke&& FLASK_APP=recognizeFile.py flask run --host=0.0.0.0
 
