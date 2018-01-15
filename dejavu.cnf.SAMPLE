@@ -1,6 +1,6 @@
 {
     "database": {
-        "host": "35.189.58.225",
+        "host": "127.0.0.1",
         "user": "root",
         "passwd": "", 
         "db": "dejavu"

@@ -18,5 +18,8 @@ if __name__ == '__main__':
 	song = recognizer.recognize_file("RAW/ironManRaw.WAV")
 	print "No shortcut, we recognized: %s\n" % song
 
+	song = recognizer.recognize_file("RAW/IronMan_420-425secs.wav")
+	print "No shortcut, we recognized: %s\n" % song
+
 	song = recognizer.recognize_file("RAW/IronMan_420-425secs.mp3")
 	print "No shortcut, we recognized: %s\n" % song
